@@ -14,5 +14,22 @@
 
 
 <ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label> Title</ion-label>
+      <ion-input type="text" [(ngModel)]='this.dataBerita.title'></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label> Photo</ion-label>
+      <ion-input type="text" [(ngModel)]='this.dataBerita.photo'></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Description</ion-label>
+      <ion-input type="text" [(ngModel)]='this.dataBerita.description'></ion-input>
+    </ion-item>
+
+    <button ion-button (click)='input()'>Submit</button>
+  </ion-list>
+
 
 </ion-content>

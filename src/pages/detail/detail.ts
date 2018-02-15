@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { BeritaProvider} from '../../providers/berita/berita';
+import { BeritaProvider } from '../../providers/berita/berita';
 /**
  * Generated class for the DetailPage page.
  *
@@ -14,15 +14,15 @@ import { BeritaProvider} from '../../providers/berita/berita';
   templateUrl: 'detail.html',
 })
 export class DetailPage {
-	private dataBerita={
-	title:'',
-	photo:'',
-	description:''
-	}
+  private dataBerita = {
+    title: '',
+    photo: '',
+    description: ''
+  }
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,public beritaProvider:BeritaProvider) {
-  var id=navParams.get('id')
-  this.dataBerita=beritaProvider.detailBerita(id)
+  constructor(public navCtrl: NavController, public navParams: NavParams, public beritaProvider: BeritaProvider) {
+    var id = navParams.get('id')
+    this.dataBerita = beritaProvider.detailBerita(id)
   }
 
   ionViewDidLoad() {

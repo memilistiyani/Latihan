@@ -13,13 +13,19 @@
 </ion-header>
 
 
-<ion-content padding>
-<ion-label>  User </ion-label>
-<ion-input type="text" [(ngModel)]='this.username'></ion-input>
-<ion-label> Password </ion-label>
-<ion-input type="text" [(ngModel)]='this.password'> </ion-input>
-
-<button ion-button (click)="ok()">LOGIN</button>
+<ion-content class="login_backround" padding>
+  <img src='../../assets/imgs/global.jpg ' class="gambar">
+  <ion-list>
+    <ion-item>
+      <ion-label> User</ion-label>
+      <ion-input type="text" [(ngModel)]='this.username'></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label> Password </ion-label>
+      <ion-input type="text" [(ngModel)]='this.password'> </ion-input>
+    </ion-item>
+    <button ion-button full (click)="ok()">LOGIN</button>
+  </ion-list>
 
 
 

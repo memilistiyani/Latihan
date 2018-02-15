@@ -14,11 +14,23 @@
 
 
 <ion-content padding>
-	<ion-list>
+  <ion-card *ngFor="let berita of this.beritaProvider.listBerita() | async" (click)="detail(berita.id)">
+    <ion-item >
+      <ion-avatar item-start>
+        <img src="{{berita.photo}}" alt="">
+      </ion-avatar>
+      <h2>{{berita.title}} </h2>
+    </ion-item>
+  </ion-card>
+
+
+
+	<!-- <ion-list>
 		<ion-item *ngFor="let berita of this.beritaProvider.listBerita() | async" (click)="detail(berita.id)">
 		{{berita.title}}
 		</ion-item>
-	</ion-list>
+  </ion-list> -->
+
 
 
 </ion-content>
