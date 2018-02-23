@@ -6,21 +6,28 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>list</ion-title>
+  <ion-navbar color='hijau'>
+    <ion-title>List</ion-title>
+
+      <ion-buttons end>
+        <button ion-button icon-only (click)='input()'>
+          <ion-icon name='add'></ion-icon>
+        </button>
+      </ion-buttons>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-  <ion-card *ngFor="let berita of this.beritaProvider.listBerita() | async" (click)="detail(berita.id)">
+  <ion-card *ngFor="let berita of this.beritaProvider.listBerita() | async" (click)="detail(berita)">
     <ion-item >
       <ion-avatar item-start>
         <img src="{{berita.photo}}" alt="">
       </ion-avatar>
       <h2>{{berita.title}} </h2>
     </ion-item>
+    
   </ion-card>
 
 

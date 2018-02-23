@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { BeritaProvider } from '../../providers/berita/berita';
 import { DetailPage } from '../detail/detail';
+import { InputPage } from '../input/input';
 
 /**
  * Generated class for the ListPage page.
@@ -19,9 +20,12 @@ export class ListPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public beritaProvider: BeritaProvider) {
   }
+  input(){
+    this.navCtrl.push(InputPage)
+  }
 
-  detail(id) {
-    this.navCtrl.push(DetailPage, { id: id })
+  detail(b) {
+    this.navCtrl.push(DetailPage, { berita:b })
   }
 
   ionViewDidLoad() {
